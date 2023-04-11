@@ -15,8 +15,8 @@ function Home() {
             <div>
                 <ul>
                     {items.map((item, index) => (
-                        <li onClick={() => linkToPage({ index })}>
-                            <img />
+                        <li onClick={() => linkToPage({ index })} key={index}>
+                            <img alt={item}/>
                             {item}
                         </li>
                     ))}
