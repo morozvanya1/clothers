@@ -13,7 +13,7 @@ function Item({ category }) {
       </div>
       <div className='content'>
         {
-          (category == "Футболки") && valShirts.map((v, k) => (
+          (category === "Футболки") && valShirts.map((v, k) => (
             <img alt={category} key={k} src={v} />
           ))
         }
