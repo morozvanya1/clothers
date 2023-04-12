@@ -27,7 +27,7 @@ import shirts25 from "./IMG_6562.jpeg";
 import shirts26 from "./IMG_6563.jpeg";
 import shirts27 from "./IMG_6564.jpeg";
 
-export default {
+const el = {
   shirts0,
   shirts1,
   shirts2,
@@ -57,3 +57,5 @@ export default {
   shirts26,
   shirts27,
 };
+
+export default el;
