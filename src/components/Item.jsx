@@ -20,7 +20,7 @@ function Item({ category }) {
   return (
     <div className='Item'>
       <div className='header'>
-        <img src={arrow.arrow} alt="Назад" onClick={() => { window.location.href = "/" }} />
+        <img src={arrow.arrow} alt="Назад" onClick={() => { window.location.href = "/item" }} />
         <h2>{category}</h2>
       </div>
       <div className='content'>
