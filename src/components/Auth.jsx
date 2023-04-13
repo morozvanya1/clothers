@@ -9,7 +9,7 @@ function Auth() {
 
     function changeType() {
         const t = document.getElementById("pass").type;
-        if (t == "text") {
+        if (t === "text") {
             document.getElementById("pass").type = "password";
             document.getElementById("lock").src = icons.eye;
         } else {
