@@ -6,19 +6,23 @@ function Home() {
     const items = ["Футболки", "Штаны", "Шорты", "Куртки", "Остальное"];
     const valKinds = [kinds.shirts, kinds.pants, kinds.shorts, kinds.jackets, kinds.caps];
 
-    function linkToPage({ item }) {
-        window.location.href = "/item/" + item;
+    function linkToPage({ link }) {
+        if (link === undefined) {
+            link = "";
+        }
+        window.location.href = "/" + link;
     }
 
     return (
         <div>
             <header>
                 <h1>Гардероб</h1>
+                <button onClick={() => linkToPage({})}>ВЫЙТИ</button>
             </header>
             <div>
                 <ul>
                     {items.map((item, index) => (
-                        <li onClick={() => linkToPage({ item })} key={index}>
+                        <li onClick={() => { const link = "item/" + item; linkToPage({ link }) }} key={index}>
                             <img alt={item} src={valKinds[index]} />
                             {item}
                         </li>

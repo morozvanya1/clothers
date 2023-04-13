@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,6 +14,32 @@
 
   display: flex;
   flex-direction: column;
+}
+
+.App header::before {
+  content: "";
+}
+
+.App header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 15px 0 70px;
+}
+
+.App header button {
+  padding: 5px 15px;
+
+  border: 1px solid blue;
+  background-color: blue;
+  color: white;
+
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .App header h1 {
@@ -86,4 +112,64 @@
 
 .Item .content img {
   margin: 5px;
+}
+
+/* auth */
+
+.Auth {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Auth h3 {
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+.Auth .input {
+  background-color: gainsboro;
+  padding: 25px 25px;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Auth .input input {
+  padding: 10px 20px;
+  margin-bottom: 15px;
+
+  border-radius: 15px;
+  border: 1px solid blue;
+  opacity: 0.5;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Auth .input button {
+  padding: 8px 0;
+
+  border-radius: 15px;
+  border: 1px solid blue;
+  background-color: blue;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: white;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.Auth .input button:hover {
+  color: blue;
+  background-color: white;
+
+  opacity: 0.5;
 }
