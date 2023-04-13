@@ -18,13 +18,9 @@
   flex-direction: row;
   justify-content: space-between;
 
+  width: 246px;
+
   color: rgb(255, 255, 255);
-
-  
-}
-
-.header h3 {
-  padding-right: 38px;
 }
 
 .header button {
