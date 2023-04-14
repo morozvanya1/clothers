@@ -2,6 +2,7 @@
   width: 100%;
   color: white;
   overflow-y: scroll;
+  background: rgb(26, 31, 37);
 }
 
 .Item header {
