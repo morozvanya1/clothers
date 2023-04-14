@@ -16,7 +16,7 @@ function Home() {
         window.location.href = "/" + link;
     }
 
-    const h = window.innerHeight - 60.67;
+    const h = window.innerHeight - 59.67;
 
     const style = { height: h };
     const content = { marginTop: '55px' }
