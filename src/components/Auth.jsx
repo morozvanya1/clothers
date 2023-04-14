@@ -15,9 +15,14 @@ function Auth() {
                 setItems(json);
             })
         );
-        linkToPage();
-        
+
         console.log(items);
+
+        await fetch("/marsh_stops.php?marshlist=1001").then((resp) =>
+            {
+                console.log(resp.text());
+            });
+        // linkToPage();
     }
 
     function changeType() {
