@@ -18,13 +18,14 @@
   flex-direction: row;
   justify-content: space-between;
 
-  width: 250px;
+  width: 246px;
 
   color: rgb(255, 255, 255);
 }
 
 .header button {
   padding: 5px;
+  margin: 0;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
