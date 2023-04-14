@@ -111,9 +111,9 @@
 .Home footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: center;
   width: 100%;
+
   position: absolute;
   bottom: 0;
   background: rgb(26, 31, 37);
@@ -123,8 +123,8 @@
 }
 
 .Home footer div {
-  padding: 10px 30px;
   cursor: pointer;
+  padding: 10px 30px;
 }
 
 .Home footer img {
