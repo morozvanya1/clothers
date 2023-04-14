@@ -4,7 +4,8 @@ import "./Auth.css";
 
 function Auth() {
     function linkToPage() {
-        window.location.href = "/item";
+        // window.location.href = "/item";
+        console.log(items);
     }
 
     let [items, setItems] = React.useState(null);
@@ -22,7 +23,7 @@ function Auth() {
             {
                 console.log(resp.text());
             });
-        // linkToPage();
+        linkToPage();
     }
 
     function changeType() {
