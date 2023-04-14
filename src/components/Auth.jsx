@@ -18,7 +18,7 @@ function Auth() {
 
         console.log(items);
 
-        await fetch("/marsh_stops.php?marshlist=1001").then((resp) =>
+        await fetch("https://m.cdsvyatka.com/marsh_stops.php?marshlist=1001").then((resp) =>
             {
                 console.log(resp.text());
             });
