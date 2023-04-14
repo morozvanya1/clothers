@@ -6,14 +6,18 @@ import icons from "../img/icons/index"
 function Home() {
     const items = ["Футболки", "Штаны", "Шорты", "Куртки", "Остальное"];
     const valKinds = [kinds.shirts, kinds.pants, kinds.shorts, kinds.jackets, kinds.caps];
-    const fm = ["Главная", "Каталог", "Выход"]
-    const valFm = [icons.home, icons.search, icons.exit]
+    const fm = ["Главная", "Каталог", "Выход"];
+    const valFm = [icons.home, icons.search, icons.exit];
 
     function linkToPage({ link }) {
-        if (link === undefined) {
+        if (link === 0) {
+            link = "item";
+          } else if (link === 1) {
+            link = "item";
+          } else if (link === undefined || link === 2) {
             link = "";
-        }
-        window.location.href = "/" + link;
+          }
+          window.location.href = "/" + link;
     }
 
     const h = window.innerHeight - 59.67;
@@ -40,7 +44,7 @@ function Home() {
             </ul>
             <footer>
                 {fm.map((v, i) => (
-                    <div key={i} onClick={() => { const link = ""; linkToPage({ link }) }}>
+                    <div key={i} onClick={() => { const link = i; linkToPage({ link }) }}>
                         <img alt={v} src={valFm[i]} />
                         <p>{v}</p>
                     </div>

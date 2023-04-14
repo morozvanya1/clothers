@@ -78,6 +78,7 @@
   justify-content: center;
   
   padding: 5px;
+  cursor: pointer;
 }
 
 .Home .content li {
@@ -124,7 +125,11 @@
 
 .Home footer div {
   cursor: pointer;
-  padding: 10px 50px;
+  padding: 10px 40px;
+}
+
+.Home footer div:hover {
+  opacity: 0.5;
 }
 
 .Home footer img {
