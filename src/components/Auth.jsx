@@ -10,28 +10,14 @@ function Auth() {
     let [items, setItems] = React.useState(null);
 
     async function fetchMovies() {
-        await fetch("./db.json").then((resp) =>
-            resp.json().then((json) => {
-                setItems(json);
-            })
-        );
-        setItems(`{"index":1}`);
-        await fetch(`http://localhost:8000/notes/`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ ...items}),
-        });
-        await fetch("./db.json").then((resp) =>
+        await fetch("/db.json").then((resp) =>
             resp.json().then((json) => {
                 setItems(json);
             })
         );
         linkToPage();
+        console.log(items);
     }
-
-    console.log(items);
 
     function changeType() {
         const t = document.getElementById("pass").type;
