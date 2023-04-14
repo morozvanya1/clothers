@@ -7,13 +7,30 @@ function Auth() {
         window.location.href = "/item";
     }
 
-    React.useEffect(() => {
-        fetch("./db.json").then((resp) =>
-          resp.json().then((json) => {
-            console.log(json);
-          })
+    let [items, setItems] = React.useState(null);
+
+    async function fetchMovies() {
+        await fetch("./db.json").then((resp) =>
+            resp.json().then((json) => {
+                setItems(json);
+            })
         );
-      }, []);
+        setItems(`{"index":1}`);
+        await fetch(`http://localhost:8000/notes/`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ ...items}),
+        });
+        await fetch("./db.json").then((resp) =>
+            resp.json().then((json) => {
+                setItems(json);
+            })
+        );
+    }
+
+    console.log(items);
 
     function changeType() {
         const t = document.getElementById("pass").type;
@@ -41,7 +58,7 @@ function Auth() {
                     <img id="lock" src={icons.eye} alt="lock" onClick={() => changeType()} />
                     <input type="password" id="pass" placeholder="Пароль" />
                 </div>
-                <button onClick={() => linkToPage()}>Войти</button>
+                <button onClick={() => fetchMovies()}>Войти</button>
             </div>
         </div>
     )
