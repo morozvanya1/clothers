@@ -28,6 +28,7 @@ function Auth() {
                 setItems(json);
             })
         );
+        linkToPage();
     }
 
     console.log(items);
