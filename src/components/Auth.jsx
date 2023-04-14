@@ -7,6 +7,14 @@ function Auth() {
         window.location.href = "/item";
     }
 
+    React.useEffect(() => {
+        fetch("./db.json").then((resp) =>
+          resp.json().then((json) => {
+            console.log(json);
+          })
+        );
+      }, []);
+
     function changeType() {
         const t = document.getElementById("pass").type;
         if (t === "text") {
@@ -30,8 +38,8 @@ function Auth() {
                     <input type="text" id="name" placeholder="Логин" />
                 </div>
                 <div className='content'>
-                    <img id="lock" src={icons.eye} alt="lock" onClick={() => changeType()}/>
-                    <input type="password" id="pass" placeholder="Пароль"/>
+                    <img id="lock" src={icons.eye} alt="lock" onClick={() => changeType()} />
+                    <input type="password" id="pass" placeholder="Пароль" />
                 </div>
                 <button onClick={() => linkToPage()}>Войти</button>
             </div>
