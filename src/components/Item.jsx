@@ -21,7 +21,7 @@ function Item({ category }) {
     if (link === 0) {
       link = "item";
     } else if (link === 1) {
-      link = "item";
+      link = "shop";
     } else {
       link = "";
     }
