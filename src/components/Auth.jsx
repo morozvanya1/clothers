@@ -4,8 +4,7 @@ import "./Auth.css";
 
 function Auth() {
     function linkToPage() {
-        // window.location.href = "/item";
-        console.log(items);
+        window.location.href = "/item";
     }
 
     let [items, setItems] = React.useState(null);
@@ -18,11 +17,6 @@ function Auth() {
         );
 
         console.log(items);
-
-        await fetch("https://m.cdsvyatka.com/marsh_stops.php?marshlist=1001").then((resp) =>
-            {
-                console.log(resp.text());
-            });
         linkToPage();
     }
 
