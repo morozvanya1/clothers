@@ -16,16 +16,21 @@ function Home() {
         window.location.href = "/" + link;
     }
 
+    const h = window.innerHeight - 60.67;
+
+    const style = { height: h };
+    const content = { marginTop: '55px' }
+
     return (
-        <div className='Home'>
+        <div className='Home' style={style}>
             <header>
-                <img src={icons.wardrobe} alt="Лого"/>
+                <img src={icons.wardrobe} alt="Лого" />
                 <div className='search'>
                     <img src={icons.loupe} alt="Поиск" />
                     <input type="text" id="search" placeholder="Поиск" />
                 </div>
             </header>
-            <ul className='content'>
+            <ul className='content' style={content}>
                 {items.map((item, index) => (
                     <li onClick={() => { const link = "item/" + item; linkToPage({ link }) }} key={index}>
                         <img alt={item} src={valKinds[index]} />
