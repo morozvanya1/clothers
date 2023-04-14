@@ -1,0 +1,102 @@
+.Shop {
+  width: 100%;
+  color: white;
+  overflow-y: scroll;
+  background: rgb(26, 31, 37);
+}
+
+.Shop header {
+  text-align: center;
+  font-size: 18px;
+
+  background-color: #e6b333;
+
+  padding: 10px 0;
+}
+
+.Shop .addContent {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.Shop .addContent input {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);;
+  color: rgba(255, 255, 255, 0.5);
+
+  padding: 5px 10px;
+
+  font-size: 14px;
+}
+
+.Shop .addContent input:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.Shop .addContent input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.Shop .addContent button {
+  padding: 6px 15px;
+  text-transform: uppercase;
+
+  background-color: #e6b333;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.Shop .content {
+  padding: 0 20px 20px 20px;
+}
+
+.Shop .content h3 {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.Shop .content p {
+  font-size: 16px;
+  color: #e6b333;;
+}
+
+.Shop .content input {
+  margin: 7px;
+}
+
+/* footer */
+
+.Shop footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  background: rgb(26, 31, 37);
+
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Shop footer div {
+  cursor: pointer;
+  padding: 10px 40px;
+}
+
+.Shop footer div:hover {
+  opacity: 0.5;
+}
+
+.Shop footer img {
+  width: 20px;
+  height: 20px;
+}
+
+.Shop footer p {
+  font-size: 12px;
+}

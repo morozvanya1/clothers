@@ -13,7 +13,7 @@ function Home() {
         if (link === 0) {
             link = "item";
           } else if (link === 1) {
-            link = "item";
+            link = "shop";
           } else if (link === undefined || link === 2) {
             link = "";
           }

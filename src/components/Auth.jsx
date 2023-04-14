@@ -16,6 +16,7 @@ function Auth() {
             })
         );
         linkToPage();
+        
         console.log(items);
     }
 

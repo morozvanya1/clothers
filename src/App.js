@@ -3,14 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Item from "./components/Item";
 import Auth from "./components/Auth";
+import Shop from "./components/Shop";
 
 function App() {
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/item" element={<Home/>} exact />
         <Route path="/" element={<Auth/>} exact />
+        <Route path="/shop" element={<Shop/>} exact />
+        <Route path="/item" element={<Home/>} exact />
         <Route path="/item/Футболки" element={<Item category="Футболки"/>} exact />
         <Route path="/item/Штаны" element={<Item category="Штаны"/>} exact />
         <Route path="/item/Шорты" element={<Item category="Шорты"/>} exact />
